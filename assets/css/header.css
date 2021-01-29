@@ -1,0 +1,290 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    padding: 40px 25px 0;
+}
+
+.header__navigation-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.header__dekstop-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 170px;
+}
+.header__dekstop-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.header__dekstop-navigation li {
+    margin-right: 35px;
+    overflow: hidden;
+    position: relative;
+}
+.header__dekstop-navigation li:last-child {
+    margin-right: 0;
+}
+.header__dekstop-navigation li:hover .header__dekstop-navigation-link {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.header__dekstop-navigation li:hover .header__dekstop-navigation-link-hover {
+    top: 0;
+}
+.header__dekstop-navigation-link {
+    display: block;
+    color: #ffffff;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.header__dekstop-navigation-link-hover {
+    color: #d02b2b;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    position: absolute;
+    top: 100%;
+}
+
+.nav__toggle-class-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #d02b2b;
+    -webkit-box-shadow: 4px 8px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 8px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 11;
+}
+.nav__toggle-class-btn:hover {
+    border-top-right-radius: 50%;
+}
+.nav__toggle-class-btn span {
+    display: block;
+    width: 34px;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+.nav__toggle-class-btn span::before,
+.nav__toggle-class-btn span::after {
+    content: "";
+    width: 34px;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+.nav__toggle-class-btn span::before {
+    top: -10px;
+}
+.nav__toggle-class-btn span::after {
+    bottom: -10px;
+}
+
+/* ACTIVE ======================= */
+.nav__toggle-class-btn-active {
+    border-top-right-radius: 50%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.nav__toggle-class-btn-active span {
+    background-color: transparent;
+}
+
+.nav__toggle-class-btn-active span::before,
+.nav__toggle-class-btn-active span::after {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    top: 0;
+}
+.nav__toggle-class-btn-active span::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.nav__toggle-class-btn-active span::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.nav-active-wrapper {
+    background-color: rgba(208, 43, 43, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+}
+.nav-active-wrapper-active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+}
+.nav {
+    width: 0;
+    height: 0;
+    background-color: #d02b2b;
+    border-radius: 50%;
+    -webkit-transform: translate(40%, -40%);
+    -ms-transform: translate(40%, -40%);
+    transform: translate(40%, -40%);
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    opacity: 0;
+    cursor: auto;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: -1;
+}
+
+.nav-active {
+    width: 1520px;
+    height: 1520px;
+    opacity: 1;
+    z-index: 10;
+}
+
+.nav ul {
+    padding-right: 50%;
+    visibility: hidden;
+    position: relative;
+    top: 50%;
+    left: 0;
+}
+.nav ul li {
+    margin-left: 50%;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.nav__link {
+    color: #fff;
+    font-family: "Risque", cursive;
+    font-size: 32px;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.nav__link:hover {
+    -webkit-filter: drop-shadow(0 0 10px #fff);
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.nav-active ul {
+    visibility: visible;
+}
+
+.nav ul li:hover .nav__link {
+    -webkit-animation: shakeSymbols 0.75s;
+    animation: shakeSymbols 0.75s;
+}
+
+@-webkit-keyframes shakeSymbols {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    100% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes shakeSymbols {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    100% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+}
+
+@media (max-width: 990px) {
+    .header__dekstop-navigation {
+        display: none;
+    }
+    .nav-active {
+        width: 1220px;
+        height: 1220px;
+    }
+}
+@media (max-width: 768px) {
+    .header__dekstop-navigation {
+        display: none;
+    }
+    .nav-active {
+        width: 1020px;
+        height: 1020px;
+    }
+}
+@media (max-width: 545px) {
+    .nav ul li {
+        margin-left: 70%;
+    }
+}
